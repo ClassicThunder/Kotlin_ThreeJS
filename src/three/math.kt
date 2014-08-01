@@ -1,10 +1,21 @@
-package org.sample
+package js.threejs
 
 import js.native
 import js.noImpl
 import org.w3c.dom.Element
 
-native
+native("THREE.Color")
+public class Color(hexString: String) {
+    //Properties
+    public native var r: Double = 0.0
+    public native var b: Double = 0.0
+    public native var g: Double = 0.0
+    //Functions
+    public fun setRGB(r: Double, b: Double, g: Double): Unit = js.noImpl
+}
+
+
+native("THREE.Color")
 public native trait Vector3 {
     //Properties
     public native var x: Double
@@ -17,7 +28,7 @@ public native trait Vector3 {
     public fun setZ(z: Double): Unit
 }
 
-native
+native("THREE.Color")
 public native trait Euler {
     //Properties
     public native var x: Double

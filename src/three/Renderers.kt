@@ -1,8 +1,6 @@
 package js.threejs
 
 import org.w3c.dom.Element
-import org.sample.Scene
-import org.sample.PerspectiveCamera
 
 native("THREE.WebGLRenderer")
 public class WebGLRenderer {

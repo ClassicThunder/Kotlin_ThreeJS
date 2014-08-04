@@ -5,7 +5,7 @@ import js.noImpl
 import org.w3c.dom.Element
 
 native("THREE.Scene")
-public class Scene {
+public class Scene : Object3D() {
     //Functions
-    public fun add(mesh: Mesh): Unit = js.noImpl
+    public fun add(a: Any): Unit = js.noImpl
 }

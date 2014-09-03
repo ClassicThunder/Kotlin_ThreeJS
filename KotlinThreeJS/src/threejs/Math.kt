@@ -73,7 +73,7 @@ public class Euler {
 }
 
 native("THREE.Vector2")
-public class Vector2 {
+public class Vector2(x: Double = 0.0, y: Double = 0.0) {
     //Properties
     public native var x: Double = 0.0
     public native var y: Double = 0.0
@@ -84,7 +84,7 @@ public class Vector2 {
 }
 
 native("THREE.Vector3")
-public class Vector3 {
+public class Vector3(x: Double, y: Double, z: Double) {
     //Properties
     public native var x: Double = 0.0
     public native var y: Double = 0.0

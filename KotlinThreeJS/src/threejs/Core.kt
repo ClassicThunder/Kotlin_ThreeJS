@@ -5,6 +5,22 @@ import js.noImpl
 import org.w3c.dom.Element
 import java.util.ArrayList
 
+native("THREE.Face3")
+fun Face3(a: Int, b: Int, c: Int): Face3 = js.noImpl
+
+native("THREE.Face3")
+public class Face3(a: Int, b: Int, c: Int, normal: Vector3, color: Color, materialIndex: Int) {
+    public native var a: Int = 0;
+    public native var b: Int = 0;
+    public native var c: Int = 0;
+    public native var normal: Vector3 = js.noImpl
+    public native var color: Color = js.noImpl
+    public native var vertexNormals: Array<Vector3> = js.noImpl
+    public native var vertexColors: Array<Color> = js.noImpl
+    public native var vertexTangents: Array<Vector3> = js.noImpl
+    public native var materialIndex: Int = 0;
+}
+
 native("THREE.Geometry")
 public open class Geometry {
     //Properties
@@ -12,14 +28,14 @@ public open class Geometry {
     public native var name: String = js.noImpl
     public native var vertices: Array<Vector3> = js.noImpl
     public native var colors: Array<Color> = js.noImpl
-    //public native var faces: Array<Triangle> = js.noImpl
+    public native var faces: Array<Face3> = js.noImpl
     //public native var faceVertexUvs: Array<UV> = js.noImpl
-    //public native var morphTargets: Vector3 = js.noImpl
-    //public native var morphColors: Vector3 = js.noImpl
-    //public native var morphNormals: Vector3 = js.noImpl
+    public native var morphTargets: Array<Any> = js.noImpl
+    public native var morphColors: Array<Color> = js.noImpl
+    public native var morphNormals: Array<Vector3> = js.noImpl
     public native var skinWeights: Vector3 = js.noImpl
     public native var skinIndices: Vector3 = js.noImpl
-    //public native var boundingBox: Vector3 = js.noImpl
+    public native var boundingBox: Object3D = js.noImpl
     public native var boundingSphere: Double = js.noImpl
     public native var hasTangents: Boolean = js.noImpl
     public native var dynamic: Boolean = js.noImpl
